@@ -1,4 +1,4 @@
-# PlaceTrack: Campus Placement Application Tracker
+# Offerly: Campus Placement Application Tracker
 
 A full-stack **MERN** web application built for **Full Stack Development II (24BET_TPP-603), Experiment 10: Lab-Based Mini Project**.
 

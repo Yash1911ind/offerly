@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext.jsx';
 import Alert from '../components/Alert.jsx';
+import AuthLayout from '../components/AuthLayout.jsx';
 import { BRANCHES } from '../utils/format.js';
 
 export default function Register() {
@@ -58,8 +59,7 @@ export default function Register() {
   );
 
   return (
-    <div className="auth-wrap">
-      <div className="card auth-card wide">
+    <AuthLayout wide>
         <h1>Create your account</h1>
         <div className="segmented" role="tablist">
           <button type="button" className={!isAdmin ? 'active' : ''} onClick={() => setIsAdmin(false)}>Student</button>
@@ -94,7 +94,6 @@ export default function Register() {
           </button>
         </form>
         <p className="muted small center">Already registered? <Link to="/login">Log in</Link></p>
-      </div>
-    </div>
+    </AuthLayout>
   );
 }

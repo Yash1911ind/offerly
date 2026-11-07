@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext.jsx';
 import Alert from '../components/Alert.jsx';
+import AuthLayout from '../components/AuthLayout.jsx';
 
 export default function Login() {
   const { user, login } = useAuth();
@@ -28,8 +29,7 @@ export default function Login() {
   };
 
   return (
-    <div className="auth-wrap">
-      <div className="card auth-card">
+    <AuthLayout>
         <h1>Welcome back</h1>
         <p className="muted">Log in to apply for jobs or manage placements.</p>
         <Alert onClose={() => setError('')}>{error}</Alert>
@@ -54,7 +54,6 @@ export default function Login() {
           Admin: admin@cu.edu / admin123<br />
           Student: aarav@cu.edu / student123
         </div>
-      </div>
-    </div>
+    </AuthLayout>
   );
 }

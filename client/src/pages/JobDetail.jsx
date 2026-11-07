@@ -5,6 +5,7 @@ import { useAuth } from '../context/AuthContext.jsx';
 import Loader from '../components/Loader.jsx';
 import Alert from '../components/Alert.jsx';
 import StatusBadge from '../components/StatusBadge.jsx';
+import CompanyAvatar from '../components/CompanyAvatar.jsx';
 import { daysLeft, formatDate, formatPay, isAccepting } from '../utils/format.js';
 
 export default function JobDetail() {
@@ -119,7 +120,7 @@ export default function JobDetail() {
       <div className="detail">
         <section className="card">
           <div className="job-card-top">
-            <div className="company-avatar lg" aria-hidden="true">{job.company[0]}</div>
+            <CompanyAvatar name={job.company} size={60} />
             <div>
               <h1 className="detail-title">{job.title}</h1>
               <div className="muted">{job.company} · {job.location}</div>

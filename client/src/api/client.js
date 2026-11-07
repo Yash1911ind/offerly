@@ -2,7 +2,7 @@
 // VITE_API_URL can point at a separately deployed backend; by default requests go to /api
 // (proxied to Express in development, same origin in production).
 const BASE = (import.meta.env.VITE_API_URL || '') + '/api';
-const TOKEN_KEY = 'placetrack_token';
+const TOKEN_KEY = 'offerly_token';
 
 export const tokenStore = {
   get: () => localStorage.getItem(TOKEN_KEY),

@@ -1,5 +1,6 @@
-import { Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar.jsx';
+import Logo from './components/Logo.jsx';
 import ProtectedRoute from './components/ProtectedRoute.jsx';
 import Home from './pages/Home.jsx';
 import Login from './pages/Login.jsx';
@@ -34,7 +35,18 @@ export default function App() {
         </Routes>
       </main>
       <footer className="footer">
-        <div className="container">PlaceTrack · Campus Placement Application Tracker · MERN mini project</div>
+        <div className="container footer-inner">
+          <div>
+            <Logo size={24} />
+            <p className="muted small">From application to offer: the campus placement tracker.</p>
+          </div>
+          <nav className="footer-links small">
+            <Link to="/jobs">Browse jobs</Link>
+            <Link to="/register">Create account</Link>
+            <Link to="/login">Log in</Link>
+          </nav>
+        </div>
+        <div className="container footer-bottom small muted">© {new Date().getFullYear()} Offerly · MERN mini project, FSD-II Experiment 10</div>
       </footer>
     </>
   );
