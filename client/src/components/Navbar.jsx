@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext.jsx';
 import Logo from './Logo.jsx';
+import ThemeToggle from './ThemeToggle.jsx';
 
 export default function Navbar() {
   const { user, logout } = useAuth();
@@ -56,6 +57,8 @@ export default function Navbar() {
             </>
           )}
         </div>
+
+        <ThemeToggle />
 
         <button className="nav-toggle" aria-label="Toggle menu" aria-expanded={open} onClick={() => setOpen(!open)}>
           <span /><span /><span />
