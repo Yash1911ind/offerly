@@ -46,7 +46,7 @@ export default function App() {
             <Link to="/login">Log in</Link>
           </nav>
         </div>
-        <div className="container footer-bottom small muted">© {new Date().getFullYear()} Offerly · MERN mini project, FSD-II Experiment 10</div>
+        <div className="container footer-bottom small muted">© {new Date().getFullYear()} Offerly</div>
       </footer>
     </>
   );
